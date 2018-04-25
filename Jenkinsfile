@@ -8,8 +8,7 @@ pipeline {
   stages {
     stage('test python') {
       steps {
-        sh '''mvn --version
-sudo apt-get install python'''
+        sh 'sudo apt-get install python mvn'
       }
     }
   }
