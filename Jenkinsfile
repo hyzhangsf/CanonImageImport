@@ -1,10 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'maven:3.3.3'
+    }
+
+  }
   stages {
     stage('test python') {
       steps {
-        sh '''echo "Hello World"
-python tests/test_handler.py'''
+        sh 'mvn --version'
       }
     }
   }
