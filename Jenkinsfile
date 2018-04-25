@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'nosetest tests/'
+        sh 'nosetests tests/'
       }
     }
   }
