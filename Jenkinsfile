@@ -9,7 +9,7 @@ pipeline {
     stage('test python') {
       steps {
         sh '''mvn --version
-apt-get install python'''
+sudo apt-get install python'''
       }
     }
   }
