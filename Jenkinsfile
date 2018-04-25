@@ -6,7 +6,13 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('test python') {
+      agent {
+        docker {
+          image 'ubuntu:latest'
+        }
+
+      }
       steps {
         sh 'nosetests tests/'
       }
